@@ -9,7 +9,7 @@ public:
 	GameManager(const GameManager&) = delete;
 	GameManager& operator=(const GameManager&) = delete;
 
-	void Initialize();
+	void Initialize(int width, int height, const char* title);
 	void Run();
 	void Destroy();
 
@@ -18,7 +18,7 @@ private:
 	~GameManager();
 
 private:
-	WindowManager m_WindowManager;
+	WindowManager* m_WindowManager = nullptr;
 	bool m_isRunning;
 };
 
