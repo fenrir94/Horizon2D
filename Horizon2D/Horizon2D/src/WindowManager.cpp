@@ -1,7 +1,7 @@
+#define GLAD_GL_IMPLEMENTATION
+#include <glad/gl.h>
 #include "WindowManager.h"
 #include "Constants.h"
-
-
 
 WindowManager::WindowManager()
 {
@@ -13,7 +13,7 @@ WindowManager::~WindowManager()
 {
 }
 
-WindowManager& WindowManager::getInstance()
+WindowManager& WindowManager::GetInstance()
 {
 	static WindowManager instance;
 	return instance;
@@ -22,12 +22,17 @@ WindowManager& WindowManager::getInstance()
 void WindowManager::Initialize(int width, int height, const char* title)
 {
 	glfwInit();
+
+	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
+	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 6);
+	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
+
 	m_Window = glfwCreateWindow(width, height, title, 0, 0);
 }
 
 void WindowManager::ClearWindow()
 {
-	glClearColor(1.f, 1.f, 1.f, 1.f);
+	glClearColor(0.f, 0.f, 0.f, 1.f);
 	glClear(GL_COLOR_BUFFER_BIT);
 	glfwSwapBuffers(m_Window);
 }
@@ -35,7 +40,7 @@ void WindowManager::ClearWindow()
 void WindowManager::CreateWindow()
 {
 	glfwMakeContextCurrent(m_Window);
-	gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
+	gladLoadGL(glfwGetProcAddress);
 }
 
 void WindowManager::Destroy()

@@ -9,7 +9,7 @@ GameManager::~GameManager()
 {
 }
 
-GameManager& GameManager::getInstance()
+GameManager& GameManager::GetInstance()
 {
 	static GameManager instance;
 	return instance;
@@ -17,7 +17,7 @@ GameManager& GameManager::getInstance()
 
 void GameManager::Initialize(int width, int height, const char* title)
 {
-	m_WindowManager = &WindowManager::getInstance();
+	m_WindowManager = &WindowManager::GetInstance();
 	m_WindowManager->Initialize(width, height, title);
 	m_WindowManager->CreateWindow();
 }
@@ -25,8 +25,9 @@ void GameManager::Initialize(int width, int height, const char* title)
 void GameManager::Run()
 {
 	
-	while (m_isRunning)
+	while (m_isRunning && !glfwWindowShouldClose(m_WindowManager->m_Window))
 	{
+		glfwPollEvents();
 		m_WindowManager->ClearWindow();
 	}
 }

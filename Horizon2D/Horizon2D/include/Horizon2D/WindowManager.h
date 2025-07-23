@@ -1,11 +1,13 @@
 #pragma once
-#include <glad/glad.h>
 #include <GLFW/glfw3.h>
+
+class GameManager;
 
 class WindowManager
 {
+	friend GameManager;
 public:
-	static WindowManager& getInstance();
+	static WindowManager& GetInstance();
 
 	void Initialize(int widht, int height, const char* title);
 	void ClearWindow();
