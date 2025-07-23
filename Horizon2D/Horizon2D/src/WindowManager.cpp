@@ -34,13 +34,17 @@ void WindowManager::ClearWindow()
 {
 	glClearColor(0.f, 0.f, 0.f, 1.f);
 	glClear(GL_COLOR_BUFFER_BIT);
-	glfwSwapBuffers(m_Window);
 }
 
 void WindowManager::CreateWindow()
 {
 	glfwMakeContextCurrent(m_Window);
 	gladLoadGL(glfwGetProcAddress);
+}
+
+void WindowManager::SwapWindowBuffer()
+{
+	glfwSwapBuffers(m_Window);
 }
 
 void WindowManager::Destroy()

@@ -12,6 +12,7 @@ public:
 	void Initialize(int widht, int height, const char* title);
 	void ClearWindow();
 	void CreateWindow();
+	void SwapWindowBuffer();
 	void Destroy();
 
 private:
