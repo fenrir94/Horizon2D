@@ -21,15 +21,17 @@
   <ItemGroup>
     <ClInclude Include="include\Horizon2D\Constants.h" />
     <ClInclude Include="include\Horizon2D\GameManager.h" />
+    <ClInclude Include="include\Horizon2D\IGameState.h" />
     <ClInclude Include="include\Horizon2D\InputManager.h" />
+    <ClInclude Include="include\Horizon2D\StateManager.h" />
     <ClInclude Include="include\Horizon2D\WindowManager.h" />
-    <ClInclude Include="StateManager.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\GameManager.cpp" />
+    <ClCompile Include="src\IGameState.cpp" />
     <ClCompile Include="src\InputManager.cpp" />
+    <ClCompile Include="src\StateManager.cpp" />
     <ClCompile Include="src\WindowManager.cpp" />
-    <ClCompile Include="StateManager.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
