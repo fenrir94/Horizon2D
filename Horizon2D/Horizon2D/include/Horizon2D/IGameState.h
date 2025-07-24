@@ -3,8 +3,8 @@
 class IGameState
 {
 public:
-	void Initialize();
-	void Update(float dt);
-	void Exit();
+	virtual void Initialize() = 0;
+	virtual void Update(float dt) = 0;
+	virtual void Exit() = 0;
 };
 

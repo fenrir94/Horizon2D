@@ -52,3 +52,8 @@ void WindowManager::Destroy()
 	glfwDestroyWindow(m_Window);
 	glfwTerminate();
 }
+
+unsigned int WindowManager::GetWidthWindow()
+{
+	return m_width;
+}
