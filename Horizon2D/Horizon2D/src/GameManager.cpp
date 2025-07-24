@@ -1,5 +1,6 @@
 #include "GameManager.h"
 #include <iostream>
+#include <GLFW/glfw3.h>	
 
 GameManager::GameManager()
 {
@@ -17,42 +18,41 @@ GameManager& GameManager::GetInstance()
 }
 
 
-void KeyCallback(GLFWwindow* window, int key, int scancode, int action, int mods)
-{
-	std::cout << "ESC" << std::endl;
-	if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS)
-	{
-		
-		glfwSetWindowShouldClose(window, true);
-	}
-
-	if (key == GLFW_KEY_SPACE && action == GLFW_PRESS)
-	{
-		std::cout << "SPACE" << std::endl;
-	}
-
-}
-
 void GameManager::Initialize(int width, int height, const char* title)
 {
 	m_WindowManager = &WindowManager::GetInstance();
 	m_WindowManager->Initialize(width, height, title);
 	m_WindowManager->CreateWindow();
 
-	glfwSetKeyCallback(m_WindowManager->m_Window, KeyCallback);
+	m_InputManager.Initialize();
 }
 
 
 
 void GameManager::Run()
 {
+	std::cout << "Horizon" << std::endl;
+
 	while (m_isRunning && !glfwWindowShouldClose(m_WindowManager->m_Window))
 	{
 		m_WindowManager->ClearWindow();
-
-		std::cout << "Horizon" << std::endl;
-
 		glfwPollEvents();
+		
+
+		m_InputManager.Update(m_WindowManager->m_Window);
+
+		// StateManager
+		
+		if (m_InputManager.IsKeyPressed(GLFW_KEY_SPACE))
+		{
+			std::cout << "Space" << std::endl;
+		}
+
+		
+		if (m_InputManager.IsKeyPressed(GLFW_KEY_ESCAPE))
+		{
+			glfwSetWindowShouldClose(m_WindowManager->m_Window, true);
+		}
 
 		m_WindowManager->SwapWindowBuffer();
 	}

@@ -1,5 +1,6 @@
 #pragma once
 #include <GLFW/glfw3.h>
+#include <string>
 
 class GameManager;
 
@@ -15,6 +16,15 @@ public:
 	void SwapWindowBuffer();
 	void Destroy();
 
+	// Getters
+	unsigned int GetWidthWindow();
+	unsigned int GetHeightWindow();
+
+	//Setters
+	void SetWidthWindow(const unsigned int);
+	void SetHeightWindow(const unsigned int);
+	void SetTitleWindow(const unsigned int);
+
 private:
 	WindowManager();
 	~WindowManager();
@@ -26,6 +36,7 @@ private:
 	unsigned int m_width;
 	unsigned int m_heigth;
 
+	std::string title;
+
 	GLFWwindow* m_Window = nullptr;
 };
-

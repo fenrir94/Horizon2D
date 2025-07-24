@@ -1,5 +1,6 @@
 #pragma once
 #include "WindowManager.h"
+#include "InputManager.h"
 
 class GameManager
 {
@@ -18,7 +19,11 @@ private:
 	GameManager& operator=(const GameManager&) = delete;
 
 private:
+	// Singleton
 	WindowManager* m_WindowManager = nullptr;
+	
+	// 
+	InputManager m_InputManager;
 	bool m_isRunning;
 };
 

@@ -11,19 +11,29 @@ InputManager::~InputManager()
 
 void InputManager::Initialize()
 {
-	glfwSetKeyCallback(m_Window, KeyCallback);
+	//glfwSetWindowUserPointer(m_Window, this);
+	for (int key = GLFW_KEY_UNKNOWN + 1; key <= GLFW_KEY_LAST; key++)
+	{
+		m_KeyStates[key] = false;
+	}
 }
 
-void InputManager::KeyCallback(GLFWwindow* window, int key, int scancode, int action, int mods)
+void InputManager::Update(GLFWwindow* window)
 {
-	if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS)
+	for (int key = GLFW_KEY_UNKNOWN+1; key <= GLFW_KEY_LAST; key++)
 	{
-		std::cout << "ESC" << std::endl;
-		glfwSetWindowShouldClose(window, true);
+		int state = glfwGetKey(window, key);
+		m_KeyStates[key] = (state == GLFW_PRESS || state == GLFW_REPEAT);
+	}
+}
+
+bool InputManager::IsKeyPressed(int key) const
+{
+	auto iKey = m_KeyStates.find(key);
+	if (iKey != m_KeyStates.end())
+	{
+		return iKey->second;
 	}
 
-	if (key == GLFW_KEY_SPACE && action == GLFW_PRESS)
-	{
-		std::cout << "SPACE" << std::endl;
-	}
+	return false;
 }

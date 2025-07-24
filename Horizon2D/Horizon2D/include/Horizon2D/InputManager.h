@@ -1,5 +1,6 @@
 #pragma once
 #include <GLFW/glfw3.h>
+#include <unordered_map>
 
 class InputManager
 {
@@ -8,10 +9,12 @@ public:
 	~InputManager();
 
 	void Initialize();
-	void KeyCallback(GLFWwindow* window, int key, int scancode, int action, int mods);
+
+	void Update(GLFWwindow* window);
+
+	bool IsKeyPressed(int key) const;
 
 private:
-	
+	std::unordered_map<int, bool> m_KeyStates;
 
 };
-

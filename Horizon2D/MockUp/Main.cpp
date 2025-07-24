@@ -1,5 +1,5 @@
 #include "Horizon2D/GameManager.h"
-
+#include "Horizon2D/InputManager.h"
 
 int main()
 {
@@ -8,5 +8,7 @@ int main()
 	GameManager.Run();
 	GameManager.Destroy();
 	
+
+
 	return 0;
 }
