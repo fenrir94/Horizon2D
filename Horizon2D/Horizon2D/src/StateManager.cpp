@@ -1,4 +1,5 @@
 #include "StateManager.h"
+#include <iostream>
 
 StateManager::StateManager()
 {
@@ -27,6 +28,7 @@ void StateManager::Update()
 			m_GameStateCurrent->Exit();
 		}
 		m_GameStateCurrent = iStateFactory->second();
+		std::cout << "Change" << std::endl;
 		m_GameStateCurrent->Initialize();
 		m_GameStateNextStr = "";
 	}
@@ -40,5 +42,6 @@ void StateManager::ChangeGameState(const std::string& name)
 
 void StateManager::RegisterState(const std::string& name, StateFactory factory)
 {
+	std::cout << "Register" << std::endl;
 	m_StateFactories[name] = std::move(factory);
 }

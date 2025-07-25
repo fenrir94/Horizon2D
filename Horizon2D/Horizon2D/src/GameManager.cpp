@@ -42,6 +42,7 @@ void GameManager::Run()
 		m_InputManager.Update(m_WindowManager->m_Window);
 
 		// StateManager
+		m_StateManager.Update();
 		
 		if (m_InputManager.IsKeyPressed(GLFW_KEY_SPACE))
 		{
@@ -61,4 +62,14 @@ void GameManager::Run()
 void GameManager::Destroy()
 {
 	m_WindowManager->Destroy();
+}
+
+StateManager* GameManager::GetStateManager()
+{
+	return &m_StateManager;
+}
+
+InputManager* GameManager::GetInputManager()
+{
+	return &m_InputManager;
 }
