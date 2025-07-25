@@ -1,6 +1,7 @@
 #pragma once
 #include "WindowManager.h"
 #include "InputManager.h"
+#include "StateManager.h"
 
 class GameManager
 {
@@ -10,6 +11,10 @@ public:
 	void Initialize(int width, int height, const char* title);
 	void Run();
 	void Destroy();
+
+	// 
+	StateManager* GetStateManager();
+	InputManager* GetInputManager();
 
 private:
 	GameManager();
@@ -24,6 +29,7 @@ private:
 	
 	// 
 	InputManager m_InputManager;
+	StateManager m_StateManager;
 	bool m_isRunning;
 };
 
