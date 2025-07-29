@@ -18,9 +18,16 @@ void MainMenu::Initialize()
 
 void MainMenu::Update(float dt)
 {
-	if (Horizon2D::IsKeyPressed(GLFW_KEY_SPACE))
+	if (Horizon2D::IsKeyTriggered(GLFW_KEY_SPACE))
 	{
 		std::cout << "Main" << std::endl;
+	}
+
+
+	if (Horizon2D::IsKeyTriggered(GLFW_KEY_M))
+	{
+		//std::cout << "Change" << std::endl;
+		Horizon2D::ChangeGameState("StageState");
 	}
 }
 

@@ -2,6 +2,8 @@
 #include "Horizon2D/InputManager.h"
 #include <Horizon2D/Horizon2D.h>
 #include "MainMenu.h"
+#include "StageState.h"
+
 
 int main()
 {
@@ -10,6 +12,10 @@ int main()
 	Horizon2D::RegisterState("MainMenu", []() {
 		return std::make_unique<MainMenu>();
 	});
+	Horizon2D::RegisterState("StageState", []() {
+		return std::make_unique<StageState>();
+	});
+
 	Horizon2D::ChangeGameState("MainMenu");
 
 	GameManager.Run();
