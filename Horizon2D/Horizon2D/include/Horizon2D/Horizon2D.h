@@ -12,5 +12,6 @@ namespace Horizon2D
 	void ChangeGameState(const std::string& name);
 
 	bool IsKeyPressed(int key);
+	bool IsKeyTriggered(int key);
 }
 

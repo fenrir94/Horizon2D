@@ -14,3 +14,8 @@ bool Horizon2D::IsKeyPressed(int key)
 {
 	return 	GameManager::GetInstance().GetInputManager()->IsKeyPressed(key);
 }
+
+bool Horizon2D::IsKeyTriggered(int key)
+{
+	return GameManager::GetInstance().GetInputManager()->IsKeyTriggered(key);
+}
