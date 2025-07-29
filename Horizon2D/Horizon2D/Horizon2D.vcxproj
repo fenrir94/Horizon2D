@@ -24,14 +24,20 @@
     <ClInclude Include="include\Horizon2D\Horizon2D.h" />
     <ClInclude Include="include\Horizon2D\IGameState.h" />
     <ClInclude Include="include\Horizon2D\InputManager.h" />
+    <ClInclude Include="include\Horizon2D\RenderManager.h" />
     <ClInclude Include="include\Horizon2D\StateManager.h" />
     <ClInclude Include="include\Horizon2D\WindowManager.h" />
+    <ClInclude Include="MeshManager.h" />
+    <ClInclude Include="ShaderManager.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="MeshManager.cpp" />
+    <ClCompile Include="ShaderManager.cpp" />
     <ClCompile Include="src\GameManager.cpp" />
     <ClCompile Include="src\Horizon2D.cpp" />
     <ClCompile Include="src\IGameState.cpp" />
     <ClCompile Include="src\InputManager.cpp" />
+    <ClCompile Include="src\RenderManager.cpp" />
     <ClCompile Include="src\StateManager.cpp" />
     <ClCompile Include="src\WindowManager.cpp" />
   </ItemGroup>

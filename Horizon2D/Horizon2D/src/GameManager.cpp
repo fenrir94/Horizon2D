@@ -46,7 +46,7 @@ void GameManager::Run()
 		
 		if (m_InputManager.IsKeyPressed(GLFW_KEY_SPACE))
 		{
-			std::cout << "Space" << std::endl;
+			//std::cout << "Space" << std::endl;
 		}
 
 		
