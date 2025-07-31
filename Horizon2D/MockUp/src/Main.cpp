@@ -8,7 +8,7 @@
 int main()
 {
 	GameManager& GameManager = GameManager::GetInstance();
-	GameManager.Initialize(1000, 800, "MockUp");
+	GameManager.Initialize(1000, 1000, "MockUp");
 	Horizon2D::RegisterState("MainMenu", []() {
 		return std::make_unique<MainMenu>();
 	});

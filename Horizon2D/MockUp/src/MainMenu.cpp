@@ -29,6 +29,8 @@ void MainMenu::Update(float dt)
 		//std::cout << "Change" << std::endl;
 		Horizon2D::ChangeGameState("StageState");
 	}
+
+	Horizon2D::DrawRectangle(0, 0, 100, 100, 1, 0, 0, 1);
 }
 
 void MainMenu::Exit()
