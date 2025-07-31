@@ -1,5 +1,10 @@
 #include "ShaderManager.h"
 
+void ShaderManager::Initialize()
+{
+	LoadShader("Basic", "shader.vert", "shader.frag");
+}
+
 std::shared_ptr<Shader> ShaderManager::LoadShader(const std::string& name, const std::string& vertPath, const std::string& fragPath)
 {
 	auto iShader = m_Shaders.find(name);
