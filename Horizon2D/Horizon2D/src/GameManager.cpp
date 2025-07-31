@@ -25,6 +25,10 @@ void GameManager::Initialize(int width, int height, const char* title)
 	m_WindowManager->CreateWindow();
 
 	m_InputManager.Initialize();
+	m_RenderManager.Initialize();
+
+	glViewport(0, 0, width, height);
+
 }
 
 
@@ -72,4 +76,9 @@ StateManager* GameManager::GetStateManager()
 InputManager* GameManager::GetInputManager()
 {
 	return &m_InputManager;
+}
+
+RenderManager* GameManager::GetRenderManager()
+{
+	return &m_RenderManager;
 }

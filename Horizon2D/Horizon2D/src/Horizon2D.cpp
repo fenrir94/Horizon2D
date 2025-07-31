@@ -19,3 +19,8 @@ bool Horizon2D::IsKeyTriggered(int key)
 {
 	return GameManager::GetInstance().GetInputManager()->IsKeyTriggered(key);
 }
+
+void Horizon2D::DrawRectangle(float x, float y, float width, float height, float r, float g, float b, float alpha)
+{
+	GameManager::GetInstance().GetRenderManager()->DrawRectangle(x, y, width, height, r, g, b, alpha);
+}

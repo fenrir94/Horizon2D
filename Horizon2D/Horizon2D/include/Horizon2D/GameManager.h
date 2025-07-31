@@ -2,8 +2,7 @@
 #include "WindowManager.h"
 #include "InputManager.h"
 #include "StateManager.h"
-#include "MeshManager.h"
-#include "ShaderManager.h"
+#include "RenderManager.h"
 
 class GameManager
 {
@@ -17,6 +16,7 @@ public:
 	// 
 	StateManager* GetStateManager();
 	InputManager* GetInputManager();
+	RenderManager* GetRenderManager();
 
 private:
 	GameManager();
@@ -32,8 +32,8 @@ private:
 	// 
 	InputManager m_InputManager;
 	StateManager m_StateManager;
-	MeshManager m_MeshManager;
-	ShaderManager m_ShaderManager;
+	RenderManager m_RenderManager;
+	
 	bool m_isRunning;
 };
 
