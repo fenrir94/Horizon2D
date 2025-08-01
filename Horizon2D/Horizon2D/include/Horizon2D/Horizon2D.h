@@ -1,8 +1,5 @@
 #pragma once
 #include <Horizon2D/GameManager.h> 
-#include <Horizon2D/InputManager.h>
-#include <Horizon2D/Statemanager.h>
-#include <Horizon2D/RenderManager.h>
 
 // Facade 
 namespace Horizon2D

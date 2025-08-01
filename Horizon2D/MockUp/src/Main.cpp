@@ -1,5 +1,3 @@
-#include "Horizon2D/GameManager.h"
-#include "Horizon2D/InputManager.h"
 #include <Horizon2D/Horizon2D.h>
 #include "MainMenu.h"
 #include "StageState.h"
@@ -20,6 +18,8 @@ int main()
 
 	GameManager.Run();
 	GameManager.Destroy();
+
+	
 
 	return 0;
 }
