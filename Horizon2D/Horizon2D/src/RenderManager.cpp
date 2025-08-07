@@ -16,7 +16,7 @@ void RenderManager::DrawRectangle(float x, float y, float width, float height, f
 
 	shader->Use();
 	
-	glm::mat4 projection = glm::ortho(0.0f, 1000.f, 0.f, 1000.0f, -1.f, 1.f);
+	glm::mat4 projection = glm::ortho(0.0f, 800.f, 0.f, 600.0f, -1.f, 1.f);
 
 	glm::mat4 view = glm::mat4(1.0f);
 	

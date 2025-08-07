@@ -7,7 +7,7 @@
 
 Shader::Shader(const std::string& vertexPath, const std::string& fragmentPath)
 {
-	std::string filePath = "C:/Users/BCA-PC5/Documents/Horizon2D/Horizon2D/Horizon2D/src/";
+	std::string filePath = "../Horizon2D/shaders/";
 	std::string vertexDir = filePath + vertexPath;
 	std::string fragDir = filePath + fragmentPath;
 
