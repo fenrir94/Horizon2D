@@ -2,6 +2,14 @@
 
 Object::Object()
 {
+	m_Position = {0.f,0.f};
+	m_Size = { 100.f, 100.f };
+}
+
+Object::Object(float x, float y, float width, float height)
+{
+	m_Position = { x, y };
+	m_Size = { width, height };
 }
 
 Object::~Object()

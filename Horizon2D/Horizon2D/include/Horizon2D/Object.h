@@ -5,7 +5,8 @@
 class Object {
 public:
 	Object();
-	~Object();
+	Object(float x, float y, float width, float height);
+	virtual ~Object();
 
 	void Initialize();
 	void Update(float dt);
