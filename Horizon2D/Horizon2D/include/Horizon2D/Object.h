@@ -12,8 +12,10 @@ public:
 	void Update(float dt);
 	void Destroy();
 
+	glm::vec2 GetPosition();
+	glm::vec2 GetSize();
 
-private:
+protected:
 	glm::vec2 m_Position;
 	glm::vec2 m_Size;
 };

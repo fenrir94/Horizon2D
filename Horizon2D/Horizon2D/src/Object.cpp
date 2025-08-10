@@ -27,3 +27,13 @@ void Object::Update(float dt)
 void Object::Destroy()
 {
 }
+
+glm::vec2 Object::GetPosition()
+{
+	return m_Position;
+}
+
+glm::vec2 Object::GetSize()
+{
+	return m_Size;
+}
