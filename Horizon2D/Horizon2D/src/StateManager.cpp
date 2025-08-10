@@ -15,10 +15,8 @@ void StateManager::Initialize(const std::string& name)
 	ChangeGameState(name);
 }
 
-void StateManager::Update()
+void StateManager::Update(float dt)
 {
-	float dt = 0;
-	
 	auto iStateFactory = m_StateFactories.find(m_GameStateNextStr);
 
 	if(iStateFactory != m_StateFactories.end())

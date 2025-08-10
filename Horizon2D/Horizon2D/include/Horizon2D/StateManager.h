@@ -17,7 +17,7 @@ public:
 	void ChangeGameState(const std::string& name);
 
 	void Initialize(const std::string& name);
-	void Update();
+	void Update(float dt);
 	
 
 	
