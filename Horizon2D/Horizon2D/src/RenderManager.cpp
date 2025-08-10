@@ -30,7 +30,7 @@ void RenderManager::DrawRectangle(float x, float y, float width, float height, f
 	mesh->Draw();
 }
 
-void RenderManager::DrawObjects(std::vector<Object>& objs)
+void RenderManager::DrawObjects(std::vector<Object*>& objs)
 {
 	for (auto obj : objs)
 	{

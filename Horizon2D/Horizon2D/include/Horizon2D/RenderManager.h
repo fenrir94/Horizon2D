@@ -13,7 +13,7 @@ public:
     void Initialize();
 
 	void DrawRectangle(float x, float y, float width, float height, float r, float g, float b, float alpha);
-    void DrawObjects(std::vector<Object>& objs);
+    void DrawObjects(std::vector<Object*>& objs);
 
 private:
     MeshManager m_MeshManager;

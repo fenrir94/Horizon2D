@@ -22,7 +22,7 @@ public:
 	
 	void ContainObject(Object* obj);
 	
-	std::vector<Object>& GetObjects();
+	std::vector<Object*>& GetObjects();
 
 
 private:
@@ -30,7 +30,7 @@ private:
 	std::unique_ptr<IGameState> m_GameStateCurrent;
 	std::string m_GameStateNextStr;
 
-	std::vector<Object> m_Objects;
+	std::vector<Object*> m_Objects;
 
 };
 

@@ -13,11 +13,11 @@ void ObjectManager::Initialize()
 {
 }
 
-void ObjectManager::Update(std::vector<Object>& objs, float dt)
+void ObjectManager::Update(std::vector<Object*>& objs, float dt)
 {
 	for (auto obj : objs)
 	{
-		obj.Update(dt);
+		obj->Update(dt);
 	}
 }
 

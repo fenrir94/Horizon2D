@@ -3,6 +3,7 @@
 #include "InputManager.h"
 #include "StateManager.h"
 #include "RenderManager.h"
+#include "ObjectManager.h"
 
 class GameManager
 {
@@ -35,6 +36,7 @@ private:
 	InputManager m_InputManager;
 	StateManager m_StateManager;
 	RenderManager m_RenderManager;
+	ObjectManager m_ObjectManager;
 	
 	bool m_isRunning;
 

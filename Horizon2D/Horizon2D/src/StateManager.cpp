@@ -33,12 +33,12 @@ void StateManager::Update(float dt)
 	m_GameStateCurrent->Update(dt);
 }
 
-void StateManager::ContainObject(Object obj)
+void StateManager::ContainObject(Object* obj)
 {
 	m_Objects.push_back(obj);
 }
 
-std::vector<Object>& StateManager::GetObjects()
+std::vector<Object*>& StateManager::GetObjects()
 {
 	return m_Objects;
 }
