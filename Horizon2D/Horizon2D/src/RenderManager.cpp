@@ -29,3 +29,11 @@ void RenderManager::DrawRectangle(float x, float y, float width, float height, f
 
 	mesh->Draw();
 }
+
+void RenderManager::DrawObjects(std::vector<Object>& objs)
+{
+	for (auto obj : objs)
+	{
+		DrawRectangle(obj->GetPosition().x, obj->GetPosition().y, obj->GetSize().x, obj->GetSize().y, 0.f, 0.f, 1.f, 1.f);
+	}
+}
