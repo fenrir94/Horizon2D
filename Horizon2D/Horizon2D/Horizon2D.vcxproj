@@ -26,6 +26,7 @@
     <ClInclude Include="include\Horizon2D\InputManager.h" />
     <ClInclude Include="include\Horizon2D\Mesh.h" />
     <ClInclude Include="include\Horizon2D\MeshManager.h" />
+    <ClInclude Include="include\Horizon2D\Object.h" />
     <ClInclude Include="include\Horizon2D\RenderManager.h" />
     <ClInclude Include="include\Horizon2D\Shader.h" />
     <ClInclude Include="include\Horizon2D\ShaderManager.h" />
@@ -39,6 +40,7 @@
     <ClCompile Include="src\InputManager.cpp" />
     <ClCompile Include="src\Mesh.cpp" />
     <ClCompile Include="src\MeshManager.cpp" />
+    <ClCompile Include="src\Object.cpp" />
     <ClCompile Include="src\RenderManager.cpp" />
     <ClCompile Include="src\Shader.cpp" />
     <ClCompile Include="src\ShaderManager.cpp" />
