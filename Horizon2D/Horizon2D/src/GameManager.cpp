@@ -1,14 +1,31 @@
 #include "GameManager.h"
 #include <iostream>
 #include <GLFW/glfw3.h>	
+#include <chrono>
 
 GameManager::GameManager()
 {
 	m_isRunning = true;
+	m_playTime = 0.f;
 }
 
 GameManager::~GameManager()
 {
+}
+
+float GameManager::GetDeltaTimeMillisecond()
+{
+	// Set lastTime, static variable
+	static auto lastTime = std::chrono::high_resolution_clock::now();
+
+	auto currentTime = std::chrono::high_resolution_clock::now();
+
+	std::chrono::duration<float, std::milli> deltaTime = currentTime - lastTime;
+
+	// Update lastTime to Current Time
+	lastTime = currentTime;
+
+	return deltaTime.count();
 }
 
 GameManager& GameManager::GetInstance()
@@ -39,14 +56,17 @@ void GameManager::Run()
 
 	while (m_isRunning && !glfwWindowShouldClose(m_WindowManager->m_Window))
 	{
+		float deltaTime = GetDeltaTimeMillisecond();
+		m_playTime += deltaTime;
 		m_WindowManager->ClearWindow();
 		glfwPollEvents();
 		
+		//std::cout << m_playTime / 1000.f << std::endl;
 
 		m_InputManager.Update(m_WindowManager->m_Window);
 
 		// StateManager
-		m_StateManager.Update();
+		m_StateManager.Update(deltaTime);
 		
 		if (m_InputManager.IsKeyPressed(GLFW_KEY_SPACE))
 		{

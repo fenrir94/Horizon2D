@@ -25,6 +25,8 @@ private:
 	GameManager(const GameManager&) = delete;
 	GameManager& operator=(const GameManager&) = delete;
 
+	float GetDeltaTimeMillisecond();
+
 private:
 	// Singleton
 	WindowManager* m_WindowManager = nullptr;
@@ -35,5 +37,7 @@ private:
 	RenderManager m_RenderManager;
 	
 	bool m_isRunning;
+
+	float m_playTime;
 };
 
