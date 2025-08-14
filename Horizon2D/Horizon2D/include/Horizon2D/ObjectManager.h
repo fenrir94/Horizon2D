@@ -1,6 +1,6 @@
 #pragma once
 #include <vector>
-#include "Object.h"
+#include "StateManager.h"
 
 class ObjectManager
 {
@@ -9,10 +9,10 @@ public:
 	~ObjectManager();
 
 	void Initialize();
-	void Update(std::vector<Object*>& objs, float dt);
+	void Update( float dt);
 	void Destroy();
 
 private:
-
+	StateManager& stateManager;
 };
 
