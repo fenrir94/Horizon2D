@@ -9,7 +9,7 @@ public:
 	~ObjectManager();
 
 	void Initialize();
-	void Update( float dt);
+	void Update(std::vector<Object*>& objs, float dt);
 	void Destroy();
 
 private:

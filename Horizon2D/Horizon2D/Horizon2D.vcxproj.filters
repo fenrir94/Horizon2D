@@ -57,7 +57,7 @@
     <ClInclude Include="include\Horizon2D\ObjectManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Character.h">
+    <ClInclude Include="include\Horizon2D\Character.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -101,7 +101,7 @@
     <ClCompile Include="src\ObjectManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Character.cpp">
+    <ClCompile Include="src\Character.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

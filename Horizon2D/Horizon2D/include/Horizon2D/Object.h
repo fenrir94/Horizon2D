@@ -9,7 +9,7 @@ public:
 	virtual ~Object();
 
 	void Initialize();
-	void Update(float dt);
+	virtual void Update(float dt);
 	void Destroy();
 
 	glm::vec2 GetPosition();

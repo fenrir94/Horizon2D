@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Character.h" />
+    <ClInclude Include="include\Horizon2D\Character.h" />
     <ClInclude Include="include\Horizon2D\Constants.h" />
     <ClInclude Include="include\Horizon2D\GameManager.h" />
     <ClInclude Include="include\Horizon2D\Horizon2D.h" />
@@ -36,7 +36,7 @@
     <ClInclude Include="include\Horizon2D\WindowManager.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Character.cpp" />
+    <ClCompile Include="src\Character.cpp" />
     <ClCompile Include="src\GameManager.cpp" />
     <ClCompile Include="src\Horizon2D.cpp" />
     <ClCompile Include="src\IGameState.cpp" />

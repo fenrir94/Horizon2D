@@ -4,7 +4,6 @@
 #include <functional>
 #include <string>
 #include <unordered_map>
-#include <Object.h>
 
 class StateManager
 {

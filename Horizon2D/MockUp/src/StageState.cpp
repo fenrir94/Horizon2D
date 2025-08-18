@@ -14,6 +14,7 @@ StageState::~StageState()
 
 void StageState::Initialize()
 {
+
 }
 
 void StageState::Update(float dt)
