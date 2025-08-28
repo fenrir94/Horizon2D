@@ -33,16 +33,6 @@ void StateManager::Update(float dt)
 	m_GameStateCurrent->Update(dt);
 }
 
-void StateManager::ContainObject(Object* obj)
-{
-	m_Objects.push_back(obj);
-}
-
-std::vector<Object*>& StateManager::GetObjects()
-{
-	return m_Objects;
-}
-
 void StateManager::ChangeGameState(const std::string& name)
 {
 	m_GameStateNextStr = name;
@@ -52,4 +42,15 @@ void StateManager::RegisterState(const std::string& name, StateFactory factory)
 {
 	std::cout << "Register" << std::endl;
 	m_StateFactories[name] = std::move(factory);
+}
+
+
+
+void StateManager::Exit()
+{
+}
+
+IGameState* StateManager::GetGameState()
+{
+	return m_GameStateCurrent.get();
 }

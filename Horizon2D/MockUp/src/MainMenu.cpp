@@ -35,4 +35,5 @@ void MainMenu::Update(float dt)
 
 void MainMenu::Exit()
 {
+
 }

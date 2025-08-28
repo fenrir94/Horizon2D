@@ -67,9 +67,11 @@ void GameManager::Run()
 
 		// StateManager
 		m_StateManager.Update(deltaTime);
-		m_ObjectManager.Update(m_StateManager.GetObjects(), deltaTime);
+		auto& objects = m_StateManager.GetGameState()->GetObjects();
 
-		m_RenderManager.DrawObjects(m_StateManager.GetObjects());
+		m_ObjectManager.Update(objects, deltaTime);
+
+		m_RenderManager.DrawObjects(objects);
 		
 		if (m_InputManager.IsKeyPressed(GLFW_KEY_SPACE))
 		{

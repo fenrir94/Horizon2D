@@ -1,6 +1,6 @@
 #pragma once
+#include "Object.h"
 #include <vector>
-#include "StateManager.h"
 
 class ObjectManager
 {
@@ -13,6 +13,5 @@ public:
 	void Destroy();
 
 private:
-	StateManager& stateManager;
 };
 

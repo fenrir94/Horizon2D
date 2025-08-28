@@ -26,6 +26,7 @@ void Object::Update(float dt)
 
 void Object::Destroy()
 {
+
 }
 
 glm::vec2 Object::GetPosition()

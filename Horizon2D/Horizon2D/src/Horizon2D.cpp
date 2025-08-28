@@ -24,3 +24,9 @@ void Horizon2D::DrawRectangle(float x, float y, float width, float height, float
 {
 	GameManager::GetInstance().GetRenderManager()->DrawRectangle(x, y, width, height, r, g, b, alpha);
 }
+
+void Horizon2D::ContainObject(Object* obj)
+{
+	GameManager::GetInstance().GetStateManager()->GetGameState()->ContainObject(obj);
+}
+

@@ -4,7 +4,7 @@
 // Facade 
 namespace Horizon2D
 {
-
+	   
 	void RegisterState(const std::string& name, StateManager::StateFactory factory);
 
 	void ChangeGameState(const std::string& name);
@@ -12,6 +12,8 @@ namespace Horizon2D
 	bool IsKeyPressed(int key);
 	bool IsKeyTriggered(int key);
 
-	void DrawRectangle(float x, float y, float width, float height, float r, float g, float b, float alpha);
+	void DrawRectangle(float x, float y, float width, float height, float r, float g, float b, float alpha); 
+
+	void ContainObject(Object* obj);
 }
 
